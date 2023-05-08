@@ -24,14 +24,13 @@ function onInput(evt) {
       .catch(error => {
         Notiflix.Notify.failure('Oops, there is no country with that name');
       });
+  } else {
+    countryInfo.innerHTML = '';
+    countryList.innerHTML = '';
+    countryList.style.listStyle = 'none';
+    countryList.style.margin = '5px';
+    countryList.style.padding = '5px';
   }
-
-  countryInfo.innerHTML = '';
-  countryList.innerHTML = '';
-  countryList.style.listStyle = 'none';
-  countryList.style.margin = '5px';
-  countryList.style.padding = '5px';
-  
 }
 
 function chooseMarkup(countryArray) {
